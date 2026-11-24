@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Piano Simulator</title>
+  <link rel="preconnect" href="https://googleapis.com" />
+  <link rel="preconnect" href="https://gstatic.com" crossorigin />
+  <link href="https://googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <main class="container" aria-labelledby="piano-title">
+    <header>
+      <h1 id="piano-title" data-i18n="title">Virtual Piano</h1>
+
+      <div class="controls-wrapper">
+        <div class="column volume-slider">
+          <label for="volume-control" data-i18n="volume">Volume</label>
+          <input
+            id="volume-control"
+            type="range"
+            min="0"
+            max="1"
+            value="0.5"
+            step="any"
+            aria-label="Volume control"
+          />
+        </div>
+
+        <div class="column keys-check">
+          <label for="keys-toggle" data-i18n="keys">Keys</label>
+          <input
+            id="keys-toggle"
+            type="checkbox"
+            checked
+            role="switch"
+            aria-checked="true"
+          />
+        </div>
+
+        <div class="column settings-group">
+          <label for="lang-select" class="sr-only" data-i18n="language">Language</label>
+          <select id="lang-select" aria-label="Select language">
+            <option value="en-US" selected>EN-US</option>
+            <option value="pt-BR">PT-BR</option>
+            <option value="es-ES">ES-ES</option>
+          </select>
+
+          <button
+            type="button"
+            id="theme-toggle"
+            class="icon-btn"
+            aria-label="Toggle color theme"
+            title="Toggle theme"
+          >
+            <!-- Sun Icon (shown in dark mode to switch to light) -->
+            <svg class="icon-sun" xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (shown in light mode to switch to dark) -->
+            <svg class="icon-moon" xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="piano-wrapper" aria-label="Piano keyboard">
+      <ul class="piano-keys" role="group">
+        <li class="key white" data-key="a" role="button" tabindex="0" aria-label="Note C4, key A"><span>a</span></li>
+        <li class="key black" data-key="w" role="button" tabindex="0" aria-label="Note C#4, key W"><span>w</span></li>
+        <li class="key white" data-key="s" role="button" tabindex="0" aria-label="Note D4, key S"><span>s</span></li>
+        <li class="key black" data-key="e" role="button" tabindex="0" aria-label="Note D#4, key E"><span>e</span></li>
+        <li class="key white" data-key="d" role="button" tabindex="0" aria-label="Note E4, key D"><span>d</span></li>
+        <li class="key white" data-key="f" role="button" tabindex="0" aria-label="Note F4, key F"><span>f</span></li>
+        <li class="key black" data-key="t" role="button" tabindex="0" aria-label="Note F#4, key T"><span>t</span></li>
+        <li class="key white" data-key="g" role="button" tabindex="0" aria-label="Note G4, key G"><span>g</span></li>
+        <li class="key black" data-key="y" role="button" tabindex="0" aria-label="Note G#4, key Y"><span>y</span></li>
+        <li class="key white" data-key="h" role="button" tabindex="0" aria-label="Note A4, key H"><span>h</span></li>
+        <li class="key black" data-key="u" role="button" tabindex="0" aria-label="Note A#4, key U"><span>u</span></li>
+        <li class="key white" data-key="j" role="button" tabindex="0" aria-label="Note B4, key J"><span>j</span></li>
+        <li class="key white" data-key="k" role="button" tabindex="0" aria-label="Note C5, key K"><span>k</span></li>
+        <li class="key black" data-key="o" role="button" tabindex="0" aria-label="Note C#5, key O"><span>o</span></li>
+        <li class="key white" data-key="l" role="button" tabindex="0" aria-label="Note D5, key L"><span>l</span></li>
+        <li class="key black" data-key="p" role="button" tabindex="0" aria-label="Note D#5, key P"><span>p</span></li>
+        <li class="key white" data-key=";" role="button" tabindex="0" aria-label="Note E5, key Semicolon"><span>;</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="./src/script.js" defer></script>
+</body>
+</html>
