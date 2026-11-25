@@ -23,6 +23,8 @@ In this project challenge, we will build a fully functional piano simulator righ
 1. Clone or download this repository.
 2. Open `index.html` directly in any modern browser, or run it using a local development server (such as the **Live Server** extension in VS Code).
 
+![Screenshot web demo](docs/assets/Screenshot_web_demo.png)
+
 See [original repository](https://github.com/felipeAguiarCode/js-music-keyboard-virtual).
 
 [LICENSE](/LICENSE)
